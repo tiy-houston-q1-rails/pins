@@ -43,7 +43,7 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
-group :productiond do
+group :production do
   gem 'rails_12factor'
 end
 
