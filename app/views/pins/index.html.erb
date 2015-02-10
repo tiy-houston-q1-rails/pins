@@ -1,0 +1,21 @@
+
+<h1>Pins</h1>
+
+<div class="row">
+
+  <%= link_to "Add New Pin", new_pin_path, class: "btn btn-default pull-right" %>
+  <%= paginate @pins %>
+</div>
+
+<div class="row">
+<% @pins.each do |pin| %>
+
+  <div class="pin col-xs-3">
+    <h3><%= pin.user.username %></h3>
+    <%= link_to image_tag(pin.photo.url(:thumb), class: "img-responsive"), pin.photo.url(:large) %>
+  </div>
+
+<% end %>
+</div>
+
+<%= paginate @pins %>
